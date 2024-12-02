@@ -1,0 +1,270 @@
+.export-container {
+            
+    margin-top: 10%;
+    margin-bottom: 10%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    }
+.exportForm{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+        select, input[type="text"], input[type="Date"] {
+            padding: 12px 20px;
+            border: 1px solid #ccc;
+            border-radius: 12px;
+            font-size: 18px;
+            color: #555;
+        }
+
+        input[type="text"] {
+            width: 200px;
+        }
+
+        .export-btn, .content a.expbutton {
+            background-color: #FFA300;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 12px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+.content a.expbutton {
+text-decoration: none;
+display: block;
+}
+        .export-btn:hover {
+            background-color: #ff8c00;
+        }
+
+        .label-text {
+            font-weight: 500;
+            margin-right: 8px;
+        }
+
+        /* Personnalisation du calendrier */
+        .flatpickr-calendar {
+            background-color: #f2f2f2;
+            border-radius: 10px;
+            font-family: 'Roboto', sans-serif;
+            border: 1px solid #ccc;
+        }
+
+        .flatpickr-months {
+            background-color: #f2f2f2;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .flatpickr-current-month {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .flatpickr-weekdays {
+            background-color: #f2f2f2;
+            font-weight: 500;
+            color: #666;
+        }
+
+        .flatpickr-day {
+            font-size: 16px;
+            padding: 10px;
+        }
+
+        .flatpickr-day.today {
+            background-color: #fff;
+            border-radius: 50%;
+            color: #000;
+            border: 1px solid #ccc;
+        }
+
+        .flatpickr-day:hover {
+            background-color: #ddd;
+        }
+
+        .flatpickr-day.disabled, .flatpickr-day.prevMonthDay, .flatpickr-day.nextMonthDay {
+            color: #ccc;
+        }
+
+        .flatpickr-month {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .flatpickr-prev-month, .flatpickr-next-month {
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .flatpickr-day.selected {
+            background-color: #000;
+            color: white;
+            border-radius: 50%;
+        }
+.errorMessage p{
+color:red;
+ margin-bottom: 3px;
+}
+/* Style pour la popup Place Order */
+.popupSelect {
+ 
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+.popupSelect-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 16px 24px;
+    border: 1px solid #888;
+    width: 288px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+
+}
+.popupSelect-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popupSelect-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.popupApp-validate {
+    background-color: #59A735;
+    color: white;
+    padding: 4px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+	margin-left:  69%;
+}
+
+.popupApp-validate:hover {
+    opacity: 0.8;
+}
+
+.left-align2 {
+    margin-bottom: 15px;
+	font-weight: bold;
+	font-size: 17px;
+
+}
+
+.company-section select {
+    width: 240px;
+	height: 43px;
+    padding: 12px 16px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    box-sizing: border-box;
+	font-size: 16px;
+	margin-bottom: 15px;
+    
+	color: #555555;
+}
+#drag_upload_file #zipfile {
+			  display: none;
+		  }
+		  #drop_file_zone{
+			  width: 100%;
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			
+		  }
+		  .bouton button{
+			  margin-top: 20px;
+			  padding: 6px 12px;
+			  font-size: 1.1em;
+			font-weight: 500;
+			  cursor: pointer;
+			color:white;
+			background-color: #59A735;
+			border: none;
+			border-radius: 7px;
+		  }
+
+		  #drag_upload_file p {
+			  text-align: center;
+			  font-size: 1.2em;
+  
+		  }
+		  #drag_upload_file p input{
+			  text-align: center;
+			  font-size: 1.2em;
+			  padding: 10px 20px;
+			  background: transparent;
+			  border: 2px solid #515151;
+			  
+		  }
+.zipUpload{
+	display: flex;
+    width: 50%;
+	flex-direction:column;
+    margin-top: 20px;
+}
+.contenaire-upload{
+	margin: 20px 50px;
+ }
+		  #drag_upload_file {
+			  background-color: #EEE;
+			  border: 2px dashed #ccc;
+			  width: 100%;
+			  min-height: 100px;
+			  padding: 20px;
+			  box-sizing: border-box;
+			  margin: 10px 0px;
+            border-radius: 7px;
+			font-size: 1.2em;
+			  
+		}
+		#drag_upload_file.uploaded {
+			background-color: #d9ebd8;
+			border: 2px dashed #48c93f;
+			
+		}
+.selectContractors{
+    display: flex;
+    justify-content: space-between;
+align-items: center;
+margin-top: 10px;
+}
+.bouton{
+    text-align: right;
+    width: 100%;
+}
+.help-icon{
+padding: 3px 6px;
+background-color: #555;
+border: none;
+border-radius: 4px;
+color: #fff;
+}

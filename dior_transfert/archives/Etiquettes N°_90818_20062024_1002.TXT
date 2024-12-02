@@ -1,0 +1,37 @@
+Division;2C3A149180;02
+Commessa;2C3A149180;00000090818
+Façonnier;2C3A149180;060234
+Saison Commessa;2C3A149180;25C
+Adresse façonnier;2C3A149180;VIA EUROPA UNITA 31
+Adresse façonnier;2C3A149180;22038 TAVERNERIO (CO)
+Adresse façonnier;2C3A149180;ITALIE
+Adresse façonnier;2C3A149180;LORMA SRL
+Adresse façonnier;2C3A149180;IT
+Adresse façonnier;2C3A149180;22038
+Adresse façonnier;2C3A149180;TAVERNERIO
+Style;2C3A149180;2C3A14
+couleur;2C3A149180;9180 Noir
+taille;2C3A149180;
+Désignation Style;2C3A149180;POP COTON GLENEAGLES AO
+Qty;2C3A149180;515.40
+Made IN;2C3A149180;IT
+Code entretien;2C3A149180;-  -  -  -
+Texte entretien;2C3A149180;
+Code EAN;2C3A149180;
+Mesure 1;2C3A149180;
+Mesure 2;2C3A149180;
+Mesure 3;2C3A149180;
+Date;2C3A149180;DATE
+Ville;2C3A149180;VILLE
+Compo 1;2C3A149180;100 % CO
+Statut Compo;2C3A149180;10
+Date Compo;2C3A149180;00000000
+Groupe produit;2C3A149180;15
+Type ordre;2C3A149180;2PR
+Couleur étiquette;2C3A149180;
+Code entretien étiquette annexe;2C3A149180;
+Couleur étiquette annexe;2C3A149180;
+taille;2C3A149180;
+Hiérarchie Niv 2;2C3A149180;010 99
+Grpe Retail/Ligne;2C3A149180;
+Impression;2C3A149180;

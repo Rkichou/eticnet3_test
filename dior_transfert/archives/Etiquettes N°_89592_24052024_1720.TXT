@@ -1,0 +1,38 @@
+Division;F024V01S   0031;02
+Commessa;F024V01S   0031;00000089592
+Façonnier;F024V01S   0031;185351
+Saison Commessa;F024V01S   0031;24M
+Adresse façonnier;F024V01S   0031;3 CITE PARADIS
+Adresse façonnier;F024V01S   0031;75010 PARIS
+Adresse façonnier;F024V01S   0031;YVES SALOMON
+Adresse façonnier;F024V01S   0031;FR
+Adresse façonnier;F024V01S   0031;75010
+Adresse façonnier;F024V01S   0031;PARIS
+Style;F024V01S   0031;F024V01S
+couleur;F024V01S   0031;5645 Bleu
+taille;F024V01S   0031;34
+Désignation Style;F024V01S   0031;VESTE 024 VISON 50CM
+Qty;F024V01S   0031;1
+Made IN;F024V01S   0031;FR
+Code entretien;F024V01S   0031;-  -  -  -
+Texte entretien;F024V01S   0031;N02
+Code EAN;F024V01S   0031;3617061547763
+Mesure 1;F024V01S   0031;
+Mesure 2;F024V01S   0031;
+Mesure 3;F024V01S   0031;
+Date;F024V01S   0031;DATE
+Ville;F024V01S   0031;VILLE
+Compo 1;F024V01S   0031;100 % MIN
+Compo 2;F024V01S   0031;100 % SE
+Compo 3;F024V01S   0031;100 % LAM
+Statut Compo;F024V01S   0031;20
+Date Compo;F024V01S   0031;00000000
+Groupe produit;F024V01S   0031;15F
+Type ordre;F024V01S   0031;2MT
+Couleur étiquette;F024V01S   0031;
+Code entretien étiquette annexe;F024V01S   0031;
+Couleur étiquette annexe;F024V01S   0031;
+taille;F024V01S   0031;T34
+Hiérarchie Niv 2;F024V01S   0031;20 08
+Grpe Retail/Ligne;F024V01S   0031;PFF
+Impression;F024V01S   0031;

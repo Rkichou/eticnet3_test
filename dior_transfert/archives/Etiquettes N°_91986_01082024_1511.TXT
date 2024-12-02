@@ -1,0 +1,36 @@
+Division;FGLOVELON   903;01
+Commessa;FGLOVELON   903;00000091986
+Façonnier;FGLOVELON   903;100760
+Saison Commessa;FGLOVELON   903;24M
+Adresse façonnier;FGLOVELON   903;B.P. 62
+Adresse façonnier;FGLOVELON   903;87200 ST JUNIEN
+Adresse façonnier;FGLOVELON   903;FRANCE
+Adresse façonnier;FGLOVELON   903;AGNELLE
+Adresse façonnier;FGLOVELON   903;FR
+Adresse façonnier;FGLOVELON   903;87200
+Style;FGLOVELON   903;FGLOVELON
+couleur;FGLOVELON   903;900 Noir
+taille;FGLOVELON   903;7,5
+Désignation Style;FGLOVELON   903;LONG GLOVES
+Qty;FGLOVELON   903;1
+Made IN;FGLOVELON   903;FR
+Code entretien;FGLOVELON   903;0 - 0 - 0 - 0 - 0
+Texte entretien;FGLOVELON   903;N03,N04
+Code EAN;FGLOVELON   903;3616256489932
+Mesure 1;FGLOVELON   903;
+Mesure 2;FGLOVELON   903;
+Mesure 3;FGLOVELON   903;
+Date;FGLOVELON   903;DATE
+Ville;FGLOVELON   903;VILLE
+Compo 1;FGLOVELON   903;100 % GOA
+Statut Compo;FGLOVELON   903;
+Date Compo;FGLOVELON   903;00000000
+Groupe produit;FGLOVELON   903;95
+Type ordre;FGLOVELON   903;2MT
+Couleur étiquette;FGLOVELON   903;
+Code entretien étiquette annexe;FGLOVELON   903;
+Couleur étiquette annexe;FGLOVELON   903;
+taille;FGLOVELON   903;T7,5
+Hiérarchie Niv 2;FGLOVELON   903;WG 01
+Grpe Retail/Ligne;FGLOVELON   903;AGANTS
+Impression;FGLOVELON   903;

@@ -1,0 +1,348 @@
+	/* ------------------------------------------------------------------- */
+	function js_version()
+	{
+		var version="Vers. 1.22.2"
+		// document.getElementById('js_version').innerHTML=version;
+		// document.getElementById('js_version_mobile').innerHTML=version;
+		// alert(version);
+		device_latitude=0;
+		device_longitude=0;
+		get_position_capacity();
+	}
+	/* --------------------------------------------------------------------- */
+	function envoi_photo()
+	{
+		document.getElementById('label_photo_').innerHTML="VOTRE SCAN EST EN COURS DE TRANSMISSION...MERCI DE PATIENTEZ QUELQUES INSTANTS !";
+		// alert(numero);
+		document.getElementById('workInProgress').style.display='block';
+		// document.getElementById('workInProgressMessage').style.display='block';
+		
+		// document.getElementById('label_photo_'+numero).style.backgroundColor='#808000';
+		var qrCodeValue=document.getElementById('get_data').value;
+		var fonction=document.getElementById('get_fonction').value;
+		var user_id=document.getElementById('get_user_id').value;
+	
+		var indice_document=document.getElementById('get_indice').value;
+		
+		
+		var canvas= document.getElementById('photo_canvas_hd');
+		var context = canvas.getContext('2d');
+		var dataUrl = canvas.toDataURL('image/jpeg');
+		var blob = dataUrl;
+		
+		
+		var data = new FormData();
+		var oReq = new XMLHttpRequest();
+		var url= "send_update_photo_dior.php";
+		oReq.open("POST", url, true);
+		oReq.onload = function (oEvent) 
+		{
+			// alert(oReq.responseText);
+			// document.getElementById('workInProgress').style.display='none';
+			// document.getElementById('workInProgressMessage').style.display='none';
+			
+			document.getElementById('retour_envoi').innerHTML=oReq.responseText;
+			document.location.href='main_menu.php';
+			// document.getElementById('iconePhoto').style.display='block';
+			// document.getElementById('div_photo_').style.display='inline-block';
+			// document.getElementById('label_photo_').style.backgroundColor='#008000';
+		};
+		
+		data.append('photo', blob);
+		data.append('qrCodeValue', qrCodeValue);
+		data.append('fonction', fonction);
+		data.append('user_id', user_id);
+		data.append('user_lat', device_latitude);
+		data.append('user_lng', device_longitude);
+		data.append('indice_document', indice_document);
+		oReq.send(data);
+	}
+	function load_canvas_photo()
+	{
+		
+		var fileinput = document.getElementById('photo'); // input file
+		fileinput.onchange = function(evt) 
+		{
+			var files = evt.target.files; // FileList object
+			var fileToDraw = files[0];
+			
+			var reader = new FileReader();
+				// Read in the image file as a data URL.
+				reader.readAsDataURL(fileToDraw);
+				reader.onload = function(evt)
+				{
+					if( evt.target.readyState == FileReader.DONE) 
+					{
+						var canvas=document.getElementById('photo_canvas_hd');
+						var img = new Image();
+						img.src = evt.target.result; 
+						img.onload = function() 
+						{
+								var scale = 1600 / img.width; // largeur  maximum
+								canvas.width = img.width * scale; //canvas width initialisation   
+								canvas.height = img.height * scale; //canvas height initialisation
+								var ctx = canvas.getContext('2d'); 
+								// Nettoie l'image
+								ctx.clearRect(0, 0, canvas.width, canvas.height);
+								ctx.fillStyle = '#ffffff';
+									ctx.fillRect(0, 0, canvas.width, canvas.height);
+								// Dessine l'image
+								ctx.drawImage(img, 0,0,canvas.width,canvas.height)
+								// Récupère sous forme d'url
+								document.getElementById('iconePhoto').src = canvas.toDataURL();
+								envoi_photo();
+						};
+					}
+				}
+			
+		};
+	};
+	/* ----------------------------------------------------------------------------------------------- */
+	
+
+	/* ----------------------------------------------------------------------------------------------- */
+	var map;
+	function init_map(lat,lng) {
+	// alert(lat);
+	var icons = {
+	  poi: {
+		icon: 'images/loc_poi.png'
+	  }
+	}
+	// alert("ici 2");
+    map = new google.maps.Map(document.getElementById('map'), {
+        center: { lat: lat, lng: lng},
+        zoom: 14,
+        styles: [
+            {
+                "featureType": "landscape",
+                "elementType": "labels",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
+            },
+            {
+                "featureType": "transit",
+                "elementType": "labels",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
+            },
+            {
+                "featureType": "poi",
+                "elementType": "labels",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
+            },
+            {
+                "featureType": "water",
+                "elementType": "labels",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
+            },
+            {
+                "featureType": "road",
+                "elementType": "labels.icon",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
+            },
+            {
+                "stylers": [
+                    {
+                        "hue": "#00aaff"
+                    },
+                    {
+                        "saturation": -100
+                    },
+                    {
+                        "gamma": 2.15
+                    },
+                    {
+                        "lightness": 12
+                    }
+                ]
+            },
+            {
+                "featureType": "road",
+                "elementType": "labels.text.fill",
+                "stylers": [
+                    {
+                        "visibility": "on"
+                    },
+                    {
+                        "lightness": 24
+                    }
+                ]
+            },
+            {
+                "featureType": "road",
+                "elementType": "geometry",
+                "stylers": [
+                    {
+                        "lightness": 57
+                    }
+                ]
+            }
+        ]
+    });
+	// alert("ici 3");
+	var features = [
+	{
+		//France
+		position: new google.maps.LatLng(lat, lng),
+		type: 'poi',
+		title: '<strong>LAST POSITION</strong><br/>',
+		content : 'LAST POSITION'
+	}];
+	
+	var infowindow;
+	// Create markers.
+	features.forEach(function(feature) {
+		var marker = new google.maps.Marker({
+			position: feature.position,
+			icon: icons[feature.type].icon,
+			map: map
+		});
+
+		// marker.addListener('click', function() {
+		    // if (infowindow) {
+				// infowindow.close();
+			// }
+			
+			// infowindow = new google.maps.InfoWindow({
+				// content: feature.title + "<br/>" + feature.content
+			// });
+			
+			// infowindow.open(map, marker);
+        // });
+	});
+}
+	/////////////////////////////////////////////////////////////////
+	function init_check_qrcode_reader()
+	{ 
+		// alert("START");
+		// device_latitude=0;
+		// device_longitude=0;
+		// get_position_capacity();
+		const html5QrCode = new Html5Qrcode("reader");
+		// alert("START 1");
+		const qrCodeSuccessCallback = message => { 
+			html5QrCode.stop().then(ignore => {
+			  // QR Code scanning is stopped.
+			}).catch(err => {
+			  // Stop failed, handle it.
+			});
+			alert(document.getElementById('fonction_reader').value);
+			if(document.getElementById('fonction_reader').value==0)
+			{
+				// alert("ici");
+				document.location.href='analyse_value_dior_coordination.php?data=' + message + "&fonction=" + document.getElementById('fonction_reader').value + "&lat=" + device_latitude + "&lng=" + device_longitude;
+			}
+			if(document.getElementById('fonction_reader').value==1)
+			{
+				document.location.href='analyse_value_dior.php?data=' + message + "&fonction=" + document.getElementById('fonction_reader').value;
+			}
+			if(document.getElementById('fonction_reader').value=="H")
+			{
+				alert("ici");
+				document.location.href='run_histoire_qrcode_dior.php?data=' + message ;
+			}
+			// document.location.href='analyse_value_dior.php?data=' + message + "&fonction=" + document.getElementById('fonction_reader').value;
+		}
+		// alert("START 2");
+		const config = { fps: 10, qrbox: 250 };
+		// alert("START 3");
+
+		// If you want to prefer front camera
+		// html5QrCode.start({ facingMode: "user" }, config, qrCodeSuccessCallback);
+		// alert("START 4");
+		// If you want to prefer back camera
+		html5QrCode.start({ facingMode: "environment" }, config, qrCodeSuccessCallback);
+		// alert("START 5");
+		// Select front camera or fail with `OverconstrainedError`.
+		// html5QrCode.start({ facingMode: { exact: "user"} }, config, qrCodeSuccessCallback);
+
+		// Select back camera or fail with `OverconstrainedError`.
+		// html5QrCode.start({ facingMode: { exact: "environment"} }, config, qrCodeSuccessCallback);
+		// alert("stop");
+	}
+	//
+	
+    function drawLine(begin, end, color) {
+      canvas.beginPath();
+      canvas.moveTo(begin.x, begin.y);
+      canvas.lineTo(end.x, end.y);
+      canvas.lineWidth = 4;
+      canvas.strokeStyle = color;
+      canvas.stroke();
+    }
+
+    
+	
+   function masque_canvas()
+   {
+	  
+		document.getElementById('canvas').style.display='none';
+		document.getElementById('loadingMessage').style.display='none';
+   }
+	//
+	function get_position_capacity()
+	{
+		if (navigator.geolocation) 
+		{
+			//then Navigation APIs
+			if ( navigator.permissions && navigator.permissions.query) 
+			{
+			//try permissions APIs first
+				navigator.permissions.query({ name: 'geolocation' }).then(function(result)
+				{
+					// Will return ['granted', 'prompt', 'denied']
+					const permission = result.state;
+					// alert("P : " + permission);
+					if ( permission === 'granted' || permission === 'prompt' ) 
+					{
+						get_current_location();
+					}
+					else
+					{
+						 no_current_location_permission(permission);
+					}
+				});
+			}
+			else
+			{
+				get_current_location();
+			}
+		}
+		else
+		{
+			
+			
+			no_current_location_available();
+		}
+		//
+	}
+	//
+	function no_current_location_available()
+	{
+		alert("Your browser do not accept gelolocalisation");
+	}
+	//
+	function no_current_location_permission(permission)
+	{
+		alert("Your browser autorisation for gelolocalisation is " + permission);
+	}
+	//

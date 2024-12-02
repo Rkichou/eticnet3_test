@@ -1,0 +1,661 @@
+ body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            font-size: 12.5px;
+        }
+        th {
+            background-color: white;
+            cursor: pointer;
+        }
+        th:hover {
+            background-color: #e9e9e9;
+        }
+        .even-row {
+            background-color: #f9f9f9;
+        }
+        .odd-row {
+            background-color: #EAEAEA;
+        }
+        .icon {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+        }
+        .btn-green, .btn-orange, .btn-red {
+           color: white;
+            border-radius: 50%;
+            width: 12px;
+            height: 12px;
+            padding: 2px;
+            text-align: center;
+            cursor: pointer;
+            font-size: 12px;
+            line-height: 9px;
+			margin-right: 8px;
+			
+}
+
+        .btn-green {
+            background-color: limegreen;
+        }
+        .btn-orange {
+            background-color: orange;
+        }
+        .btn-red {
+            background-color: red;
+        }
+		
+        
+        .details td {
+            padding: 10px;
+            border-top: none;
+        }
+        .details-content {
+            padding: 10px;
+            background-color: #444;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+			border: 1.2px solid #e2e2e2;
+            border-radius: 10px;
+			text-align: left; 
+            vertical-align: left;	 
+        }
+        .details-content span {
+            flex-grow: 1;
+        }
+        .details-toggle {
+            cursor: pointer;
+            color: white;
+        }
+
+        .details {
+            display: none;
+            background-color: #EAEAEA; /*nouveau*/
+        }
+.sub-table2 {
+    width: 98.2%;
+    background-color: white;
+    margin-bottom: 10px;
+    border-collapse: separate; /* Utiliser 'separate' pour que border-radius fonctionne */
+    border-spacing: 0; /* Éviter les espaces entre les cellules */
+    border: 1px solid #fff; /* Bordure autour du tableau */
+    border-radius: 10px; /* Arrondi des coins du tableau */
+    margin-top: -0.7%;
+    margin-left: 0.2%;
+    overflow: hidden; /* Pour que les coins arrondis soient visibles */
+    position: relative; /* Pour gérer le positionnement des éléments enfants */
+}
+ 
+.sub-table2 th, .sub-table2 td {
+    background-color: white;
+    padding: 8px;
+    font-size: 11px;
+    text-align: center;
+    vertical-align: middle;
+    border-bottom: 1px solid #ccc; /* Bordure en bas pour les lignes horizontales */
+}
+ 
+.sub-table2 th {
+    background-color: white;
+    color: #333;
+    border-bottom: 1px solid #ccc;
+}
+
+.status-summary {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+	padding-right: 2%;
+}
+
+.status {
+    padding: 7px 19px;
+    border-radius: 5px;
+    color: #fff;
+    margin-left: 8px;
+}
+
+.in-time {
+    background-color: limegreen;
+}
+
+
+
+
+
+.table-controls label {
+	
+    margin-right: 10px;
+	margin-left: 60px;
+}
+
+.table-controls select {
+    margin-right: 13px;
+    padding: 5px;
+	border-radius: 12px;
+	font-size: 14px
+
+}
+.order-summary {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  
+	
+}
+
+
+.order-summary-btn i {
+    margin-right: 10px;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.search-input {
+    padding: 13px;
+    border: 1.5px solid #ddd;
+    border-radius: 13px 0 0 13px;
+    outline: none;
+	font-size: 14px;
+	
+
+}
+
+.search-btn {
+    padding: 12px;
+     border: 1.5px solid #ddd; 
+    border-left: none;
+    background-color: white;
+    border-radius: 0 13px 13px 0;
+    cursor: pointer;
+	
+}
+
+.add-order-btn {
+    padding: 7px;
+    background-color: white;
+    color: white;
+    border: 1.5px solid #ddd; 
+    border-radius: 13px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+
+
+
+.add-order-btn i {
+    margin-right: 10px;
+}
+
+.entete th, .entete td {
+border-bottom: 1px solid #333;
+ 
+}
+.table1{
+	border-collapse: collapse;
+	
+	
+
+}
+.table1 th, .table1 td {
+text-align: center; 
+            vertical-align: middle;	 
+}
+
+
+.btn-edit-user, .btn-delete-user, .btn-fact-user, .btn-edit-contact, .btn-delete-contact{
+            padding: 3px 6px;
+            margin: 2px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .btn-edit-user,.btn-edit-contact {
+            background-color: #555555;
+            color: #fff;
+        }
+        .btn-delete-user, .btn-delete-contact {
+            background-color: #e31313;
+            color: white;
+        }
+		.btn-fact-user {
+            background-color: #59A735;
+            color: white;
+        }
+        .btn-edit-user:hover, .btn-edit-contact:hover{
+			background-color: #353333;	
+		}
+        .btn-delete-user:hover ,.btn-delete-contact:hover {
+			background-color: #9b1515;	
+		}
+      .add-user-btn {
+    background-color: #59A735; 
+    color: white; 
+    padding: 8px 16px; 
+    border: none; 
+    border-radius: 12px; 
+    font-size: 14px; 
+    display: flex; 
+    align-items: center; 
+    cursor: pointer; 
+	margin-left: 1%;
+	
+   }
+
+   .add-user-btn i {
+    margin-right: 8px;
+    font-size: 20px; 
+   }
+
+   .add-user-btn:hover, .btn-fact-user:hover{
+    background-color: #45a049; 
+   }
+   .search-container{
+	   margin-left: 55%;
+   }
+   
+   
+  /* Popup Container */
+.popupS-container {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+	align-items: center; /* Centre verticalement */
+    justify-content: center; /* Centre horizontalement */
+	
+}
+
+/* PopupS Content */
+.popupS-content {
+    background-color: #fff;
+    padding: 16px 24px;
+    border: 1px solid #888;
+    width: 34%;
+    border-radius: 20px;
+	
+}
+
+/* Close Button */
+.closeS-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.closeS-btn:hover,
+.closeS-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Form Styling */
+.popupS-content h5 {
+    margin-bottom: 40px;
+}
+
+.popupS-content h4 {
+    margin-top: 30px;
+	font-weight: bold;
+}
+
+
+
+.popupS-content input[type="text"],
+.popupS-content input[type="email"],
+.popupS-content select {
+    width: 100%;
+	height: 35px;
+    padding: 8px 12px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+	font-size: 14px;
+	margin-bottom: 7px;
+}
+
+
+.popupS-content .form-group input[type="text"]{
+    width: 49.5%;
+	
+}
+.popupS-content .form-group2 input[type="text"]{
+    width: 77%;
+	
+}
+.popupS-content .form-group2 select {
+    width: 22%;
+}
+
+.add-new-btn {
+    background-color: transparent;
+    border: none;
+    color: #1D1D1B;
+    cursor: pointer;
+    padding: 8px 0;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.createS-btn {
+    background-color: #81C441;
+    color: white;
+    padding: 6px 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 75px;
+	margin-left: 40%;
+	
+}
+.Save-btn {
+    background-color: #59A735;
+    color: white;
+    padding: 6px 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 20px;
+	margin-left: 80%;
+	
+}
+.popupp {
+    display: none;
+    position: absolute;
+    top: 15px; 
+    left: 0; /* Align the popup to the right */
+    background-color: #aaaaaa; 
+    color: white; 
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 255px; 
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    text-align: left; 
+    z-index: 1000;
+    line-height: 1.2; /* Reduce the space between lines */
+}
+
+.info-button {
+    border: none;
+    background: none;
+    padding: 0;
+    position: relative;
+}
+
+.info-button:hover .popupp {
+    display: block;
+}
+
+.popupp p {
+    margin: 0; /* Remove margin to decrease space between lines */
+}
+.bi bi-copy {
+    display: inline-block; /* Pour s'assurer que l'icône soit traitée comme un élément inline */
+    text-align: right; /* Aligne le contenu à gauche */
+    width: 100%; /* Prend toute la largeur disponible pour aligner à gauche */
+}
+.popupp p i {
+    float: right; /* Aligne l'icône à gauche dans son conteneur */
+    margin-right: 1px; /* Ajoute un petit espace après l'icône */
+}
+ /* Popup Container */
+ .popupS-container {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+	align-items: center; /* Centre verticalement */
+    justify-content: center; /* Centre horizontalement */
+	
+}
+
+/* PopupS Content */
+.popupS-content {
+    background-color: #fff;
+    padding: 16px 24px;
+    border: 1px solid #888;
+    width: 34%;
+    border-radius: 20px;
+	
+}
+
+/* Close Button */
+.closeS-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.closeS-btn:hover,
+.closeS-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Form Styling */
+.popupS-content h5 {
+    margin-bottom: 40px;
+}
+
+.popupS-content h4 {
+    margin-top: 30px;
+	font-weight: bold;
+}
+
+
+
+.popupS-content input[type="text"],
+.popupS-content input[type="email"],
+.popupS-content select {
+    width: 100%;
+	height: 35px;
+    padding: 8px 12px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+	font-size: 14px;
+	margin-bottom: 7px;
+}
+
+
+.popupS-content .form-group input[type="text"]{
+    width: 49.5%;
+	
+}
+.popupS-content .form-group2 input[type="text"]{
+    width: 77%;
+	
+}
+.popupS-content .form-group2 select {
+    width: 22%;
+}
+
+.add-new-btn {
+    background-color: transparent;
+    border: none;
+    color: #1D1D1B;
+    cursor: pointer;
+    padding: 8px 0;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.createS-btn {
+    background-color: #81C441;
+    color: white;
+    padding: 6px 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 75px;
+	margin-left: 40%;
+	
+}
+.Save-btn {
+    background-color: #59A735;
+    color: white;
+    padding: 6px 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 20px;
+	margin-left: 80%;
+	
+}
+.popupp {
+    display: none;
+    position: absolute;
+    top: 8px; 
+    left: 0; /* Align the popup to the right */
+    background-color: #aaaaaa; 
+    color: white; 
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 255px; 
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    text-align: left; 
+    z-index: 1000;
+    line-height: 1.2; /* Reduce the space between lines */
+}
+
+.info-button {
+    border: none;
+    background: none;
+    padding: 0;
+    position: relative;
+}
+
+.info-button:hover .popupp {
+    display: block;
+}
+
+.popupp p {
+    margin: 0; /* Remove margin to decrease space between lines */
+}
+.bi bi-copy {
+    display: inline-block; /* Pour s'assurer que l'icône soit traitée comme un élément inline */
+    text-align: right; /* Aligne le contenu à gauche */
+    width: 100%; /* Prend toute la largeur disponible pour aligner à gauche */
+}
+.popupp p i {
+    float: right; /* Aligne l'icône à gauche dans son conteneur */
+    margin-right: 1px; /* Ajoute un petit espace après l'icône */
+}
+
+
+.deletePopup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+	align-items: center; /* Centre verticalement */
+    justify-content: center; /* Centre horizontalement */
+}
+
+.deletePopup-content {
+    background-color: #fff;
+    padding: 16px 24px;
+    border: 1px solid #888;
+    width: 25%;
+    border-radius: 20px;
+	
+}
+.deletePopup-content h5 {
+    margin-top: 0;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.deletePopup-content p {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.deletePopup-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.btn-cancel {
+    background-color: #AAAAAA;
+    color: #fff;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+	font-size: 14px;
+}
+
+.btn-confirm-delete {
+    background-color: #E31313;
+    color: #fff;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+	font-size: 14px;
+}
+
+.deletePopup .btn-cancel:hover,
+.deletePopup .btn-confirm-delete:hover {
+    opacity: 0.8;
+}

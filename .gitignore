@@ -1,0 +1,34 @@
+# Ignorer les dossiers courants
+# Fichiers sensibles
+config.inc.php
+mail_credential.inc
+languages.inc.php
+
+# Logs et fichiers temporaires
+*.log
+*.tmp
+logs/
+tempo/
+
+# Fichiers générés automatiquement
+vendor/
+composer.lock
+# Dossiers d'intégration
+integrations/
+mailings/
+
+# Fichiers cachés ou spécifiques à l'éditeur
+*.bak
+*.swp
+*.swo
+
+# Images ou fichiers téléchargés non nécessaires
+images/
+Image/
+uploads/
+pdfs_loewe/
+millet_files/
+lemaire_transfert/
+patou_transfert/
+exports/
+exports_bat/

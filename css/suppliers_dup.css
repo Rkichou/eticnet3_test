@@ -1,0 +1,889 @@
+ body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            width: 95%;
+            border-collapse: collapse;
+			margin-left: 40px;
+			margin-right: 40px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            font-size: 12px;
+        }
+        th {
+            background-color: #FAFAFA;
+            cursor: pointer;
+        }
+        th:hover {
+            background-color: #e9e9e9;
+        }
+        .even-row {
+            background-color: #FAFAFA;
+			cursor: pointer;
+        }
+        .odd-row {
+            background-color: #EAEAEA;
+			cursor: pointer;
+        }
+        .icon {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+        }
+        .btn-green, .btn-orange, .btn-red {
+        border-radius: 50%;
+        padding: 2px;
+        text-align: center;
+        cursor: pointer;
+        font-size: 12px;
+        line-height: 9px;
+        margin-right: 4px;
+        border: none; /* Suppression des styles par défaut des boutons */
+        background-color: transparent; /* Suppression de la couleur de fond */
+		margin-top: 10px;
+    }
+
+        .details td {
+            padding: 10px;
+            border-top: none;
+        }
+        .details-content {
+            padding: 10px;
+            background-color: #444;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+			border: 1.2px solid #e2e2e2;
+            border-radius: 10px;
+			text-align: left; 
+            vertical-align: left;	 
+        }
+        .details-content span {
+            flex-grow: 1;
+        }
+        .details-toggle {
+            cursor: pointer;
+            color: white;
+        }
+
+/*/nouveau*/
+.details {
+            display: none;
+            background-color: #EAEAEA; /*nouveau*/
+			
+        }
+.sub-table2 {
+        width: 99.7%;
+    background-color: white;
+    margin-bottom: 10px;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1.5px solid #444;
+    border-radius: 10px;
+    margin-top: auto;
+    border-top: none;
+    margin-left: 0.2%;
+    position: relative;
+ /* Pour que les éléments enfants soient positionnés correctement */
+
+} 
+/* Appliquer l'arrondi aux coins des cellules */
+.sub-table2 td:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.sub-table2 td:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.sub-table2 th, .sub-table2 td {
+    background-color: white;
+    padding: 8px;
+    font-size: 11px;
+    text-align: center;
+    vertical-align: middle;
+    border-bottom: 1px solid #ccc; /* Bordure en bas pour les lignes horizontales */
+}
+
+.sub-table2 th {
+    background-color: white;
+    color: #333;
+    border-bottom: 1px solid #ccc;
+}
+/*nouveau*/
+
+.status-summary {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+	padding-right: 2%;
+}
+
+.status {
+    padding: 7px 19px;
+    border-radius: 5px;
+    color: #fff;
+    margin-left: 8px;
+}
+
+.in-time {
+    background-color: limegreen;
+}
+
+
+
+
+
+.table-controls label {
+	
+    margin-right: 10px;
+	margin-left: 60px;
+}
+
+.table-controls select {
+    margin-right: 13px;
+    padding: 5px;
+	border-radius: 12px;
+	font-size: 14px
+
+}
+.order-summary {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  
+	
+}
+
+
+.order-summary-btn i {
+    margin-right: 10px;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+    margin-right: auto;
+}
+
+.search-input {
+    padding: 12px 20px;
+    border: 1.5px solid #ddd;
+    border-radius: 12px 0 0 12px;
+    outline: none;
+    border-right: none;
+    font-size: 16px;
+    width: 70%;
+	
+
+}
+
+.search-btn {
+    padding: 12px;
+     border: 1.5px solid #ddd; 
+    border-left: none;
+    background-color: white;
+    border-radius: 0 13px 13px 0;
+    cursor: pointer;
+	
+}
+
+.add-order-btn {
+    padding: 7px;
+    background-color: white;
+    color: white;
+    border: 1.5px solid #ddd; 
+    border-radius: 13px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+
+
+
+.add-order-btn i {
+    margin-right: 10px;
+}
+
+.entête th, .entête td {
+border-bottom: 1px solid #333;
+ 
+}
+
+.btn-edit-user, .btn-delete-user, .btn-fact-user, .btn-edit-contact, .btn-delete-contact{
+            padding: 3px 6px;
+            margin: 2px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .btn-edit-user,.btn-edit-contact {
+            background-color: #555555;
+            color: #fff;
+        }
+        .btn-delete-user, .btn-delete-contact {
+            background-color: #e31313;
+            color: white;
+        }
+		.btn-fact-user {
+            background-color: #59A735;
+            color: white;
+        }
+        .btn-edit-user:hover, .btn-edit-contact:hover{
+			background-color: #353333;	
+		}
+        .btn-delete-user:hover ,.btn-delete-contact:hover {
+			background-color: #9b1515;	
+		}
+      .add-user-btn {
+		padding: 12px 20px;
+		background-color: #59A735;
+		color: #fff;
+		border: none;
+		border-radius: 12px;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		margin-right: 15px;
+		font-size: 16px;
+		gap: 8px;
+	
+   }
+
+   .add-user-btn i {
+    margin-right: 8px;
+    font-size: 20px; 
+   }
+
+   .add-user-btn:hover, .btn-fact-user:hover{
+    background-color: #45a049; 
+   }
+
+	#addSupplierBtn{
+		margin-left:0px;	
+	}
+   
+   
+  /* Popup Container */
+.popupS-container {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+	align-items: center; /* Centre verticalement */
+    justify-content: center; /* Centre horizontalement */
+	
+}
+
+/* PopupS Content */
+.popupS-content {
+    background-color: #fff;
+    padding: 16px 24px;
+    border: 1px solid #888;
+    width: 34%;
+    border-radius: 20px;
+	
+}
+
+/* Close Button */
+.closeS-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.closeS-btn:hover,
+.closeS-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Form Styling */
+.popupS-content h5 {
+    margin-bottom: 40px;
+}
+
+.popupS-content h4 {
+    margin-top: 30px;
+	font-weight: bold;
+}
+
+
+
+.popupS-content input[type="text"],
+.popupS-content input[type="email"],
+.popupS-content select {
+    width: 100%;
+	height: 35px;
+    padding: 8px 12px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+	font-size: 14px;
+	margin-bottom: 7px;
+}
+
+
+.popupS-content .form-group input[type="text"]{
+    width: 49.5%;
+	
+}
+.popupS-content .form-group2 input[type="text"]{
+    width: 77%;
+	
+}
+.popupS-content .form-group2 select {
+    width: 22%;
+}
+
+.add-new-btn {
+    background-color: transparent;
+    border: none;
+    color: #1D1D1B;
+    cursor: pointer;
+    padding: 8px 0;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.createS-btn {
+    background-color: #81C441;
+    color: white;
+    padding: 6px 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 75px;
+	margin-left: 40%;
+	
+}
+.createF-btn {
+    background-color: #81C441;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+	margin-left: 77%;
+	gap: 5px;
+	
+}
+.Save-btn {
+    background-color: #59A735;
+    color: white;
+    padding: 6px 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 20px;
+	margin-left: 80%;
+	
+}
+.popupp {
+    display: none;
+    position: absolute;
+    top: 15px; 
+    left: 0; /* Align the popup to the right */
+    background-color: #aaaaaa; 
+    color: white; 
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 255px; 
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    text-align: left; 
+    z-index: 1000;
+    line-height: 1.2; /* Reduce the space between lines */
+}
+
+.info-button {
+    border: none;
+    background: none;
+    padding: 0;
+    position: relative;
+}
+
+.info-button:hover .popupp {
+    display: block;
+}
+
+.popupp p {
+    margin: 0; /* Remove margin to decrease space between lines */
+}
+.bi bi-copy {
+    display: inline-block; /* Pour s'assurer que l'icône soit traitée comme un élément inline */
+    text-align: right; /* Aligne le contenu à gauche */
+    width: 100%; /* Prend toute la largeur disponible pour aligner à gauche */
+}
+.popupp p i {
+    float: right; /* Aligne l'icône à gauche dans son conteneur */
+    margin-right: 1px; /* Ajoute un petit espace après l'icône */
+}
+
+
+ /* Popup Container */
+.popupS-container {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+	align-items: center; /* Centre verticalement */
+    justify-content: center; /* Centre horizontalement */
+	
+}
+
+/* PopupS Content */
+.popupS-content {
+    background-color: #fff;
+    padding: 16px 24px;
+    border: 1px solid #888;
+    width: 34%;
+    border-radius: 20px;
+	
+}
+
+/* Close Button */
+.closeS-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.closeS-btn:hover,
+.closeS-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Form Styling */
+.popupS-content h5 {
+    margin-bottom: 40px;
+}
+
+.popupS-content h4 {
+    margin-top: 30px;
+	font-weight: bold;
+}
+
+
+
+.popupS-content input[type="text"],
+.popupS-content input[type="email"],
+.popupS-content select {
+    width: 100%;
+	height: 35px;
+    padding: 8px 12px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+	font-size: 14px;
+	margin-bottom: 7px;
+}
+
+
+.popupS-content .form-group input[type="text"]{
+    width: 49.5%;
+	
+}
+.popupS-content .form-group2 input[type="text"]{
+    width: 77%;
+	
+}
+.popupS-content .form-group2 select {
+    width: 22%;
+}
+
+.add-new-btn {
+    background-color: transparent;
+    border: none;
+    color: #1D1D1B;
+    cursor: pointer;
+    padding: 8px 0;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.createS-btn {
+    background-color: #81C441;
+    color: white;
+    padding: 6px 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100px;
+	margin-left: 80%;
+	display: flex; 
+	align-items: center;
+	gap: 2px;
+	
+}
+.Save-btn {
+    background-color: #59A735;
+    color: white;
+    padding: 6px 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 20px;
+	margin-left: 80%;
+	
+}
+.popupp {
+    display: none;
+    position: absolute;
+    top: 8px; 
+    left: 0; /* Align the popup to the right */
+    background-color: #aaaaaa; 
+    color: white; 
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 255px; 
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    text-align: left; 
+    z-index: 1000;
+    line-height: 1.2; /* Reduce the space between lines */
+}
+
+.info-button {
+    border: none;
+    background: none;
+    padding: 0;
+    position: relative;
+}
+
+.info-button:hover .popupp {
+    display: block;
+}
+
+.popupp p {
+    margin: 0; /* Remove margin to decrease space between lines */
+}
+.bi bi-copy {
+    display: inline-block; /* Pour s'assurer que l'icône soit traitée comme un élément inline */
+    text-align: right; /* Aligne le contenu à gauche */
+    width: 100%; /* Prend toute la largeur disponible pour aligner à gauche */
+}
+.popupp p i {
+    float: right; /* Aligne l'icône à gauche dans son conteneur */
+    margin-right: 1px; /* Ajoute un petit espace après l'icône */
+}
+
+
+.deletePopup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+	align-items: center; /* Centre verticalement */
+    justify-content: center; /* Centre horizontalement */
+}
+
+.deletePopup-content {
+    background-color: #fff;
+    padding: 16px 24px;
+    border: 1px solid #888;
+    width: 25%;
+    border-radius: 20px;
+	
+}
+.deletePopup-content h5 {
+    margin-top: 0;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.deletePopup-content p {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.deletePopup-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.btn-cancel {
+    background-color: #59A735;
+    color: #fff;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+	font-size: 12px;
+}
+
+.btn-confirm-delete {
+    background-color: #E31313;
+    color: #fff;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+	font-size: 12px;
+}
+
+.deletePopup .btn-cancel:hover,
+.deletePopup .btn-confirm-delete:hover {
+    opacity: 0.8;
+}
+/*/nouveau*/
+.details {
+            display: none;
+            background-color: #EAEAEA; /*nouveau*/
+			
+        }
+
+/*nouveau*/
+
+.DownUp-btn {
+    padding: 12px 20px;
+    background-color: #59A735;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center; 
+    margin-right: 15px;
+	font-size : 16px;
+	gap: 8px;
+	
+
+}
+.DownUp-btn:hover {
+	opacity: 0.8;
+
+}
+
+/* popup adv cheche */
+
+
+ .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1; 
+            padding-top: 100px; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgb(0,0,0); 
+            background-color: rgba(0,0,0,0.4); 
+        }
+        .modal-content {
+            background-color: #fafafa;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 10px;
+        }
+        
+
+.popup-advanced-search {
+    display: none;
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 500px;
+	height: 600px;
+    max-width: 80%;
+    padding: 15px;
+    z-index: 1000;
+    box-sizing: border-box;
+	
+	
+}
+
+.popup-content {
+    padding: 15px;
+    position: relative;
+}
+
+.popup-title {
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+}
+
+.popup-section {
+    margin-bottom: 15px;
+}
+
+.section-title {
+    margin-bottom: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #444;
+}
+
+.button-group, .input-group2, input-group3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+
+.input-field1 {
+    flex: 1 1 calc(50% - 8px);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 0.85em;
+    box-sizing: border-box;	
+	width: 220px; 
+    height: 32px; 
+    padding: 0 15px;
+    font-size: 14px;
+    color: #999;
+
+}
+
+
+
+
+
+.Recher-button-container {
+    text-align: right;
+    margin-top: 15px;
+}
+
+.btn-Recher {
+    padding: 6px 16px;
+    background-color: #81C441;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.btn-Recher:hover {
+    background-color: #218838;
+}
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #999;
+}
+
+.popup-close:hover {
+    color: #555;
+}
+/* Style des boutons */
+.service-button {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+.custom-button img {
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+    display: none; /* Masquer par défaut */
+}
+
+.custom-button.selected img {
+    display: inline; /* Afficher lorsque le bouton est sélectionné */
+}
+
+/* .table1 th, .table1 td { */
+    /* text-align: left; */
+    /* vertical-align: middle; */
+/* } */
+
+.table1{
+	border-collapse: collapse;
+}
+.table1 th, .table1 td {
+	text-align: center; 
+	vertical-align: middle;	 
+}
+
+.table1 td{
+	padding: 4px 10px;
+	color: #555555;
+}
+
+/* pour la derniere colonne action */
+.table1 td:last-child{
+	text-align: center !important;
+    width: 13%; 
+}
+
+/* pour la première colonne */
+.table1 td:nth-child(1){
+	text-align: left !important; 
+}
+
+.table1 .btn-green{
+    margin: 0;
+    padding: 0;
+    margin-right: 10px;
+}

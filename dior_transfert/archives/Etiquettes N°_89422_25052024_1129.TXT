@@ -1,0 +1,38 @@
+Division;F023V03S   0022;02
+Commessa;F023V03S   0022;00000089422
+Façonnier;F023V03S   0022;185351
+Saison Commessa;F023V03S   0022;24M
+Adresse façonnier;F023V03S   0022;3 CITE PARADIS
+Adresse façonnier;F023V03S   0022;75010 PARIS
+Adresse façonnier;F023V03S   0022;YVES SALOMON
+Adresse façonnier;F023V03S   0022;FR
+Adresse façonnier;F023V03S   0022;75010
+Adresse façonnier;F023V03S   0022;PARIS
+Style;F023V03S   0022;F023V03S
+couleur;F023V03S   0022;3540 Rouge
+taille;F023V03S   0022;36
+Désignation Style;F023V03S   0022;VESTE 023 VISON RASE 50CM
+Qty;F023V03S   0022;1
+Made IN;F023V03S   0022;FR
+Code entretien;F023V03S   0022;-  -  -  -
+Texte entretien;F023V03S   0022;N02
+Code EAN;F023V03S   0022;3617061548470
+Mesure 1;F023V03S   0022;
+Mesure 2;F023V03S   0022;
+Mesure 3;F023V03S   0022;
+Date;F023V03S   0022;DATE
+Ville;F023V03S   0022;VILLE
+Compo 1;F023V03S   0022;100 % MIN
+Compo 2;F023V03S   0022;100 % SE
+Compo 3;F023V03S   0022;100 % LAM
+Statut Compo;F023V03S   0022;20
+Date Compo;F023V03S   0022;00000000
+Groupe produit;F023V03S   0022;15F
+Type ordre;F023V03S   0022;2MT
+Couleur étiquette;F023V03S   0022;
+Code entretien étiquette annexe;F023V03S   0022;
+Couleur étiquette annexe;F023V03S   0022;
+taille;F023V03S   0022;T36
+Hiérarchie Niv 2;F023V03S   0022;20 08
+Grpe Retail/Ligne;F023V03S   0022;PFF
+Impression;F023V03S   0022;

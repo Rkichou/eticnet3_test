@@ -1,0 +1,36 @@
+Division;F005A01M   0002;02
+Commessa;F005A01M   0002;00000090318
+Façonnier;F005A01M   0002;203474
+Saison Commessa;F005A01M   0002;24M
+Adresse façonnier;F005A01M   0002;PIAZZA STEFANO JACINI, 14/15
+Adresse façonnier;F005A01M   0002;OCCHIPINTI SRL
+Adresse façonnier;F005A01M   0002;IT
+Adresse façonnier;F005A01M   0002;00191
+Adresse façonnier;F005A01M   0002;ROMA
+Style;F005A01M   0002;F005A01M
+couleur;F005A01M   0002;6795 Vert
+taille;F005A01M   0002;36
+Désignation Style;F005A01M   0002;CABAN 005 ASTRAKAN 87CM+CT
+Qty;F005A01M   0002;1
+Made IN;F005A01M   0002;IT
+Code entretien;F005A01M   0002;-  -  -  -
+Texte entretien;F005A01M   0002;N02
+Code EAN;F005A01M   0002;3616258804733
+Mesure 1;F005A01M   0002;
+Mesure 2;F005A01M   0002;
+Mesure 3;F005A01M   0002;
+Date;F005A01M   0002;DATE
+Ville;F005A01M   0002;VILLE
+Compo 1;F005A01M   0002;100 % AST
+Compo 2;F005A01M   0002;100 % SE
+Statut Compo;F005A01M   0002;10
+Date Compo;F005A01M   0002;00000000
+Groupe produit;F005A01M   0002;15F
+Type ordre;F005A01M   0002;2MT
+Couleur étiquette;F005A01M   0002;
+Code entretien étiquette annexe;F005A01M   0002;
+Couleur étiquette annexe;F005A01M   0002;
+taille;F005A01M   0002;T36
+Hiérarchie Niv 2;F005A01M   0002;20 12
+Grpe Retail/Ligne;F005A01M   0002;PFF
+Impression;F005A01M   0002;

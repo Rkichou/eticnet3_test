@@ -1,0 +1,918 @@
+
+        body {
+            font-family: Arial, sans-serif;
+			background: #FAFAFA;
+        }
+        table {
+            width: 95%;
+            border-collapse: collapse;
+		    margin-left: 40px;
+			margin-right: 40px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            font-size: 12px;
+        }
+        th {
+            background-color: #FAFAFA;
+            cursor: pointer;
+        }
+        th:hover {
+            background-color: #e9e9e9;
+        }
+        .even-row {
+            background-color: #FAFAFA;
+			cursor: pointer;
+        }
+        .odd-row {
+            background-color: #EAEAEA;
+			cursor: pointer;
+        }
+        .icon {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+        }
+        .state {
+            border-radius: 5px;
+            color: white;
+        }
+        
+       
+        .status-summary {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            padding-right: 2%;
+        }
+        .status {
+            padding: 7px 19px;
+            border-radius: 5px;
+            color: #fff;
+            margin-left: 8px;
+        }
+        .in-time {
+            background-color: limegreen;
+        }
+        .table-controls {
+	 margin-right: 220px;  
+}
+
+.table-controls label {
+    margin-right: 2px;
+}
+
+
+.rows-select {
+    margin-left: 7px;
+    padding: 5px;
+	border-radius: 8px;
+	font-size: 14px;
+	margin-right: 7px;
+
+}
+        .order-summary {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+       
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+    margin-right: auto	
+}
+
+.search-input {
+    padding: 12px 20px;
+    border: 1.5px solid #ddd;
+    border-radius: 12px 0 0 12px;
+    outline: none;
+	border-right: none;
+	font-size: 16px;
+	width: 70%;
+	
+	
+
+}
+.search-btn {
+    padding: 12px;
+     border: 1.5px solid #ddd; 
+    border-left: none;
+    background-color: white;
+    border-radius: 0 13px 13px 0;
+    cursor: pointer;
+	height: 50px;
+}
+        .add-order-btn {
+            padding: 7px;
+            background-color: white;
+            color: white;
+            border: 1.5px solid #ddd;
+            border-radius: 13px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            margin-left: 20px;
+        }
+        .add-order-btn i {
+            margin-right: 10px;
+        }
+        .croix{
+            width: 13px;
+            height: 13px;
+            margin-right: 3px;
+            vertical-align: left;
+        }
+		.devalidateimg{
+			width: 14px;
+            height: 14px;
+            margin-right: 3px;
+            vertical-align: left;
+			
+		}
+		.validatimg{
+			width: 14px;
+            height: 14px;
+            margin-right: 3px;
+            vertical-align: left;
+			
+		}
+		.commentimg{
+			width: 15;
+            height: 15px;
+            margin-right: 3px;
+            vertical-align: center;
+			
+		}
+        .navbar-iconPlus {
+            width: 30px;
+            height: 30px;
+            vertical-align: center;
+        }
+        .entête th, .entête td {
+            border-bottom: 1px solid #333;
+        }
+        .table1 {
+            border-collapse: collapse;
+        }
+        .table1 th, .table1 td {
+            text-align: center;
+            vertical-align: middle;
+        }
+        .btn-rtp, .btn-refuse, .btn-devalidate, .btn-validat {
+            padding: 5px 10px;
+            margin: 2px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn-rtp {
+            background-color: #555555;
+            color: #fff;
+        }
+        .btn-refuse {
+            background-color: #e31313;
+            color: white;
+        }
+        .btn-devalidate {
+            background-color: #2e2d2c;
+            color: white;
+        }
+		 .btn-validat {
+            background-color: limegreen;
+            color: white;
+        }
+		.btn-comment {
+			 padding: 5px 8px;
+            margin: 2px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color:  none;
+           
+        }
+        .btn-rtp:hover, .btn-refuse:hover, .btn-devalidate:hover, .btn-validat:hover, .btn-comment:hover {
+            opacity: 0.8;
+        }
+        .rtp-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .rtp-item {
+            background-color: #777;
+            color: white;
+            padding: 5px 10px;
+            margin: 2px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .rtp-item:hover {
+            background-color: #555;
+        }
+		.rtp-icon {
+          width: 14px; 
+          height: 13px; 
+          margin-right: 3px; 
+        }  
+
+	 .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1; 
+            padding-top: 100px; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgb(0,0,0); 
+            background-color: rgba(0,0,0,0.4); 
+        }
+        .modal-content {
+            background-color: #fafafa;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 10px;
+        }
+        
+        .close-btn:hover,
+        .close-btn:focus {
+            color: #aaa;
+            text-decoration: none;
+            cursor: pointer;
+        }
+		.close-btn {
+            font-size: 50px;
+            margin-left: 93%;
+			margin-top: -13%;
+        }
+        .comment-title {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .comment-input {
+            width: 100%;
+            height: 140px;
+            padding: 10px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 13px;
+            box-sizing: border-box;
+            resize: none;
+        }
+        .comment-input::placeholder {
+            vertical-align: top;
+        }
+        .send-btn {
+			background-color: #59a735;
+            color: white;
+            padding: 3px 6px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+			margin-left : 82.5%;
+        }
+        .send-btn:hover, .download-btn:hover {
+            background-color: #45a049;
+        }
+		 .modal-img {
+            width: 100%;
+            height: auto;
+			margin-bottom: 18px;
+        }
+	    .download-btn {
+			background-color: #59a735;
+            color: white;
+            padding: 3px 6px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+			margin-left : 77%;
+        }
+		
+		.download-Icon {
+    width: 14px; 
+    height: 14px;
+    margin-right: 3px;  
+    vertical-align: middle;  
+}
+  
+
+.popup-title {
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+}
+
+.popup-section {
+    margin-bottom: 15px;
+}
+
+.section-title {
+    margin-bottom: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #444;
+}
+
+.button-group, .input-group2, input-group3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+
+.input-field1 {
+    flex: 1 1 calc(50% - 8px);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 0.85em;
+    box-sizing: border-box;	
+	width: 220px; 
+    height: 32px; 
+    padding: 0 15px;
+    font-size: 14px;
+    color: #999;
+
+}
+.input-field2 {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 0.85em;
+    box-sizing: border-box;	
+	width: 220px; 
+    height: 32px; 
+    padding: 0 15px;
+    font-size: 14px;
+    color: #999;
+
+}
+
+
+.state-button {
+    flex: 1 1 calc(33% - 8px);
+    padding: 0 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 0.85em;
+    transition: background-color 0.3s;
+	
+	   width: 220px; /* Ajustez selon vos besoins */
+        height: 32px; /* Ajustez selon vos besoins */
+        font-size: 14px;
+        color: #999;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background-color: white;
+        background-image: url(" width='24' height='24'%3E%3Cpath fill='none' stroke='%23666' stroke-width='2' d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 10px center;
+        background-size: 12px;
+}
+
+.state-button:hover {
+    background-color: #e0e0e0;
+}
+
+.Recher-button-container {
+    text-align: right;
+    margin-top: 15px;
+}
+
+.btn-Recher {
+    padding: 6px 16px;
+    background-color: #81C441;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.btn-Recher:hover {
+    background-color: #218838;
+}
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #999;
+}
+
+.popup-close:hover {
+    color: #555;
+}
+
+    .input-select, .input-field {
+
+        width: 220px; /* Ajustez selon vos besoins */
+        height: 32px; /* Ajustez selon vos besoins */
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        padding: 0 15px;
+        font-size: 14px;
+        color: #999;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background-color: white;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cpath fill='none' stroke='%23666' stroke-width='2' d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 10px center;
+        background-size: 12px;
+    }
+
+    .input-select {
+        background-color: white;
+    }
+
+    .input-field {
+        background-color: #f9f9f9;
+    }
+	 .date-select {
+        width: 102px; /* Ajustez selon vos besoins */
+        height: 32px; /* Ajustez selon vos besoins */
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        padding: 0 15px;
+        font-size: 14px;
+        color: #999;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background-color: white;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cpath fill='none' stroke='%23666' stroke-width='2' d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 10px center;
+        background-size: 12px;
+}
+
+
+
+.Down-dict-btn,.Down-dict-btn1 {
+    background-color: #59A735; 
+    color: white; 
+    padding: 8px 16px; 
+    border: none; 
+    border-radius: 12px; 
+    font-size: 14px; 
+    display: flex; 
+    align-items: center; 
+    cursor: pointer; 
+	margin-right: 40px;
+	
+}
+   
+.Down-dict-btn1{
+	margin-right: 12px;
+}
+   
+.Down-dict-btn1 img{
+	height:22px;
+	width:22px;
+	margin-right:10px;
+}
+   
+.Down-dict-btn img{
+	height:20px;
+	width:20px;
+	margin-right:10px;
+}
+
+.Down-dict-btn i,.Down-dict-btn1 i {
+    margin-right: 8px;
+    font-size: 20px; 
+   }
+
+   .Down-dict-btn:hover, .Down-dict-btn1:hover {
+    background-color: #45a049; 
+   }
+   
+   
+   /* Style pour la popup Place Order */
+.popupSelect {
+ 
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+.popupSelect-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 16px 24px;
+    border: 1px solid #888;
+    width: 288px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+
+}
+.popupSelect-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popupSelect-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.popupApp-validate {
+    background-color: #59A735;
+    color: white;
+    padding: 4px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+	margin-left:  69%;
+}
+
+.popupApp-validate:hover {
+    opacity: 0.8;
+}
+
+.left-align2 {
+    margin-bottom: 15px;
+	font-weight: bold;
+	font-size: 17px;
+
+}
+
+.company-section select {
+    width: 240px;
+	height: 43px;
+    padding: 12px 16px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    box-sizing: border-box;
+	font-size: 16px;
+	margin-bottom: 15px;
+    
+	color: #555555;
+}
+
+
+
+ .btn-edit-user, .btn-delete-user {
+            padding: 3px 6px;
+            margin: 2px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .btn-edit-user {
+            background-color: #555555;
+            color: #fff;
+        }
+        .btn-delete-user {
+            background-color: #e31313;
+            color: white;
+        }
+        .btn-edit-user:hover {
+			background-color: #353333;	
+		}
+        .btn-delete-user:hover {
+			background-color: #9b1515;	
+		}
+      .add-user-btn {
+    background-color: #59A735; 
+    color: white; 
+    padding: 8px 16px; 
+    border: none; 
+    border-radius: 12px; 
+    font-size: 14px; 
+    display: flex; 
+    align-items: center; 
+    cursor: pointer; 
+   margin-left: auto; /* Aligner le bouton à droite */
+   margin-right: 40px;
+
+
+	
+   }
+
+   .add-user-btn i {
+    margin-right: 8px;
+    font-size: 20px; 
+   }
+
+   .add-user-btn:hover {
+    background-color: #45a049; 
+   }
+   
+   
+   /* Styles pour la popup */
+.popup {
+    display: none; /* Masqué par défaut */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.popup-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 12px;
+    width: 38%;
+	    position: relative; /* Nécessaire pour positionner le bouton close */
+
+}
+
+.close-btn {
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.form-group input{
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+	margin-left: 7px;
+}
+
+
+.form-group input[type="text"],
+.form-group input[type="email"] {
+    width: 100%; /* Par défaut, chaque champ prendra toute la largeur disponible */
+    margin-bottom: 10px; /* Ajout d'un espacement entre les champs */
+}
+
+.btn-create {
+    background-color: #81C441;
+    color: white;
+    padding: 6px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto 0 auto;
+}
+
+.btn-create:hover {
+    background-color: #45a049;
+}
+
+.copy-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+.phone-select {
+    width: 70px; /* Fixe la largeur spécifique pour le champ */
+    padding: 8px 4px; /* Ajuste le padding pour réduire l'espace interne */
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    text-align: center;
+    -webkit-appearance: none; /* Pour supprimer les styles par défaut dans certains navigateurs */
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.phone-select-wrapper {
+    display: inline-block;
+    position: relative;
+}
+
+.phone-select-wrapper::after {
+    content: '\25BC'; /* Ajoute une flèche vers le bas (peut être remplacée par une icône) */
+    position: absolute;
+    top: 38%;
+    right: 2px;
+    pointer-events: none;
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: #333;
+}
+.popup-header h3  {
+   margin-top: -7%;
+   margin-bottom: 10%;
+   font-size: 22px;
+
+}
+.popup-content h4{
+	font-weight: bold;
+}
+
+/*pup^p roles*/
+.popupS-content label{
+	font-size: 12px;
+	margin-top: 3%;
+}
+.user-id {
+    font-size: 13px; /* Facultatif : ajuste la taille de la police si nécessaire */
+    color: #555555; /* Facultatif : couleur du texte */
+}
+.headerEcont {
+    display: flex;
+    align-items: left; /* Aligne verticalement les éléments au centre */
+	gap: 25%;
+}
+
+/* Bouton Save */
+.popupAdUser-buttons {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.saveUser-btn {
+	
+	background-color: #59A735;
+    color: white;
+    padding: 4px 8px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+	color: #FAFAFA;
+}
+	 /* Popup Container */
+.popupS-container {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+	align-items: center; /* Centre verticalement */
+    justify-content: center; /* Centre horizontalement */
+	
+}
+/* PopupS Content */
+.popupS-content {
+    background-color: #fff;
+    padding: 16px 24px;
+    border: 1px solid #888;
+    width: 34%;
+    border-radius: 20px;
+	
+}
+
+/* Close Button */
+.closeS-btn {
+    color: #aaa;
+    float: right;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.closeS-btn:hover,
+.closeS-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Form Styling */
+.popupS-content h5 {
+    margin-bottom: 20px;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.popupS-content input[type="text"],
+.popupS-content input[type="email"],
+.popupS-content select {
+    width: 100%;
+	height: 35px;
+    padding: 8px 12px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+	font-size: 14px;
+	margin-bottom: 0px;
+}
+/**popup delete*/
+
+
+.deletePopup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+	align-items: center; /* Centre verticalement */
+    justify-content: center; /* Centre horizontalement */
+}
+
+.deletePopup-content {
+    background-color: #fff;
+    padding: 16px 24px;
+    border: 1px solid #888;
+    width: 25%;
+    border-radius: 20px;
+	
+}
+.deletePopup-content h5 {
+    margin-top: 0;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.deletePopup-content p {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.deletePopup-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.btn-cancel {
+    background-color: #59A735;
+    color: #fff;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+	font-size: 12px;
+}
+
+.btn-confirm-delete {
+    background-color: #E31313;
+    color: #fff;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+	font-size: 12px;
+}
+
+.deletePopup .btn-cancel:hover,
+.deletePopup .btn-confirm-delete:hover {
+    opacity: 0.8;
+}

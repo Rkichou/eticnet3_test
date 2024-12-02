@@ -1,0 +1,69 @@
+.export-container {
+
+ height: 300px;
+
+
+
+			text-align: center;
+        }
+        .export-container h1 {
+
+			margin-bottom : 40px;
+			font-family: Aeonik;
+            font-size: 32px;
+            font-weight: 500;
+            line-height: 38px;
+            color: #1d1d1B;
+        }
+        select, input[type="Date"] {
+            padding: 10px 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 18px;
+            color: #555;
+        }
+
+        .export-btn {
+            background-color: #FFA300;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 12px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+			margin-left : 20px;
+        }
+
+        .export-btn:hover {
+            background-color: #ff8c00;
+        }
+
+        .label-text {
+            
+            margin-right: 8px;
+            font-family: Aeonik;
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 28px;
+            color: #1d1d1B;
+        }
+.exportForm {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+.export-container {
+    margin-top: 9%;
+    margin-bottom: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.content a.export-btn {
+    text-decoration: none;
+    display: block;
+}

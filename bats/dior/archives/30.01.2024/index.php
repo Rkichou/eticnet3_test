@@ -1,0 +1,2 @@
+<?php
+// On affiche rien !

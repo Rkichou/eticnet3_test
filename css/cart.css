@@ -1,0 +1,154 @@
+.container {
+	float:left;
+	padding: 20px;
+	width:45%;
+	margin-left: 41px;
+}
+.titrecontainer {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-content: space-around;
+		align-items: flex-start;
+		gap: 677px;}
+.back-to-store {
+	display: block;
+	margin-bottom: 20px;
+	text-decoration: none;
+	color: #333;
+}
+
+.product {
+	display:block;
+	background-color: transparent;
+	padding: 20px;
+	/* border: 1px solid #ddd; */
+	border-radius: 8px;
+	/* margin-bottom:20px; */
+	flex: 3;
+}
+
+.product h3 {
+	margin: 0 0 19px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+}
+.trashbtn{    background: transparent;
+    border: none;
+    color: #404040;
+    font-size: 20px;
+    cursor: pointer;}
+.supplier-row {
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+	gap: 10px;
+}
+
+.supplier-row select,
+.supplier-row input {
+    padding: 2px 12px 2px 12px;
+	    flex: 1;
+    border-radius: 8px;
+    border: 1px solid #555555;
+    background: transparent;
+    color: #555555;
+    height: 32px;
+}
+
+.supplier-row .location-btn {
+    background: transparent;
+    border: none;
+    color: #404040;
+    font-size: 23px;
+	cursor: pointer;
+}
+
+.supplier-row .delete-btn {
+    background: transparent;
+    border: none;
+    color: #404040;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.add-supplier {
+	display: inline-block;
+	margin-top: 10px;
+	color: #404040;
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+
+.billing-panel {
+	width: 625px;
+	background-color: #F5F5F5;
+	padding: 20px;
+	/* border: 1px solid #ddd; */
+	border-radius: 12px;
+	flex: 2;
+	margin-bottom:20px;
+}
+
+.side-panel {
+    padding: 20px;
+	float:right;
+	width:40%;
+}
+
+.side-panel h3 {
+	margin: 0 0 19px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.side-panel input {
+    display: block;
+    width: 100%;
+    height: 30px;
+    padding: 8px 12px 8px 12px;
+	margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.place-order {
+	width: 20%;
+    margin-left: 78%;
+	padding: 10px;
+	background: #59A735;
+	color: white;
+	border: none;
+	cursor: pointer;
+	border-radius: 10px;
+	margin-bottom: 20px;	
+}
+
+.container-order {
+  text-align: center;
+}
+
+.container-order p {
+    font-size: 30px;
+    margin-top: 15%;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.container-order button {
+  background-color: #ffa500; /* Orange button */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.container-order button:hover {
+  background-color: #ff8c00; /* Darker orange on hover */
+}

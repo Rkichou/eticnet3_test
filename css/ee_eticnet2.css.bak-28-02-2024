@@ -1,0 +1,964 @@
+/* ----------------------------------------------------------------- */
+@font-face
+{
+	font-family: ropasans;
+	src: url('/fonts/RopaSans-Regular.ttf'); 
+}
+@font-face    
+{
+	font-family: lavage; 
+	src: url('/fonts/ordsymb_kenzo_2019.ttf');
+}
+/* ----------------------------------------------------------------- */
+body
+{
+	padding:0px;
+	margin:0px;
+	font-family:ropasans;
+	background: rgb(255,255,255); 
+	color:#0C1248; 
+	font-size:0.7vw;
+}
+label
+{ 
+	display:block;
+}
+@media (max-width: 768px)
+{
+	body
+	{ 
+		font-size:1vw; 
+	}
+}
+/* ----------------------------------------------------------------- */
+h1
+{
+	font-size:4vw;
+	font-weight:100;
+}
+h2
+{
+	font-size:3.5vw;
+	font-weight:100;
+}
+h3
+{
+	font-size:2.6vw;
+	font-weight:100;
+}
+h4
+{
+	font-size:2.5vw;
+	font-weight:100;
+}
+h5
+{
+	font-size:2vw;
+	font-weight:100;
+}
+h6 
+{
+	font-size:1vw;
+	font-weight:100;
+}
+@media (max-width: 768px)
+{
+	h1
+	{
+		font-size:8vw;
+	}
+	h2
+	{
+		font-size:7vw;
+	}
+	h3
+	{
+		font-size:5vw;
+	}
+	h4
+	{
+		font-size:4.5vw;
+	}
+	h5
+	{
+		font-size:4vw;
+	}
+	h6
+	{
+		font-size:3vw;
+	}
+}
+h1,h2,h3,h4,h5,h6,div,span
+{
+	margin:0px;
+	padding:0px%;
+}
+/* ----------------------------------------------------------------- */
+.as_agence-div-onglet
+{
+	/* border-radius:5px; */
+	border-bottom:1px solid #aaaaaa;
+	width:100%;
+	text-align:left;
+	font-size:1vw;
+	
+}
+.as_agence-index-onglet-actif
+{
+	border-top:1px solid #202020;
+	/* border-right:1px solid #202020; */
+	/* border-left:1px solid #202020; */
+	border-radius:1px;
+	background-color:#202020;
+	color:#fefefe;
+	width:20%;
+	max-width:20%;
+	margin-right:0.5%;
+	padding:0.5%;
+	display:inline-block;
+	cursor:pointer;
+	
+}
+.as_agence-index-onglet-inactif
+{
+	border-top:1px solid #999999;
+	/* border-right:1px solid #999999; */
+	/* border-left:1px solid #999999; */
+	border-radius:1px;
+	background-color:#999999;
+	color:#cccccc;
+	width:20%;
+	max-width:20%;
+	margin-right:0.5%;
+	padding:0.5%;
+	display:inline-block;
+	cursor:pointer;
+}
+.as_agence-icon-header
+{
+	height:16px;
+}
+.as_agence-table
+{
+	width:100%;
+	/* border-collapse:; */
+	border-spacing:2px;
+	padding:5px;
+	
+}
+.as_agence-sort-field-asc
+{
+	background-image:url("../images/top_box_sort_asc.png");
+	background-position:left top;
+	background-repeat: no-repeat;
+	/* padding-left:5px; */
+	
+}
+.as_agence-sort-field-desc
+{
+	background-image:url("../images/top_box_sort_desc.png");
+	background-position:left top;
+	background-repeat: no-repeat;
+	/* padding-left:20px; */
+	
+}
+.as_agence-table-bigHeader 
+{
+	background-color:transparent;
+	color:#fefefe;
+	border:0px solid #dddddd;
+	border-radius:5px;
+
+}
+.as_agence-table-bigHeader-td
+{
+	border:1px solid #dddddd;
+	border-radius:5px;
+	padding-left:12px;
+	background-color:#202020;
+}
+.as_agence-table-bigHeader-td-transparent
+{
+	border:0px solid #dddddd;
+	border-radius:5px;
+	padding-left:5px;
+	background-color:transparent;
+	text-align:right;
+}
+.as_agence-table-header 
+{
+	background-color:#606060;
+	color:#fefefe;
+	border:0px solid #dddddd;
+	border-radius:1px;
+	color:#fefefe;
+}
+.as_agence-table-header-td
+{
+	border:1px solid #dddddd;
+	border-radius:1px;
+	padding-left:12px;
+}
+.as_agence-table-datas 
+{
+	background-color:#ffffff;
+	color:#202020;
+	border:0px solid #dddddd;
+	border-radius:1px;
+}
+.as_agence-table-datas-td
+{
+	/* background-color:#999999; */
+	/* color:#fefefe; */
+	border:0px solid #dddddd;
+	border-radius:1px;
+	padding-left:5px;
+	vertical-align:top;
+}
+.as_agence-table-pair
+{
+	background-color:#E0E0E0;
+}
+.as_agence-table-impair
+{
+	background-color:#E5E5F3;
+}
+.as_agence-background-transparent
+{
+	background-color:transparent;
+}
+/* ----------------------------------------------------------------- */
+.as_agence-drapeau
+{
+	margin-top:4px;
+	vertical-align:middle;
+	width:32px;
+	max-width:32px;
+	display:inline-block;
+	cursor:pointer;
+	/* background-color:transparent; */
+}
+/* ----------------------------------------------------------------- */
+.as_agence-corps
+{
+	vertical-align:top;
+	width:100%;
+	max-width:100%;
+	background-color:transparent;
+}
+.as_agence-titre-menu
+{
+	font-size:2vw;
+	margin-left:1%;
+}
+@media (max-width: 768px)
+{
+	.as_agence-titre-menu
+	{
+		font-size:4vw;
+	}
+}
+.as_agence-div
+{
+	width:100%;
+	max-width:100%;
+}
+.as_agence_box-connect
+{
+	position:relative;	
+	border:0px solid #efefef;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	width:48%;
+	max-width:48%;
+	left:40%;
+	padding:5%;
+	text-align:center;
+	/* -------------------------------------------------- */	
+	/* background: rgb(255,255,255); */
+	/* background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(236,234,231,1) 50%, rgba(249,248,245,1) 100%); */
+}
+.as_agence-table-records
+{
+	font-size:0.7vw;
+}
+.as_agence-input
+{
+	min-height:32px;
+	border:0px solid #efefef;
+	border-bottom:1px solid #999999;
+	border-right:1px solid #999999;
+	border-top:0px solid #808080;
+	border-left:0px solid #808080;
+	
+	background-color:transparent;
+	font-size:1vw;
+	-webkit-border-radius: 1px;
+	-moz-border-radius: 1px;
+	border-radius: 1px;
+	
+}
+@media (max-width: 768px)
+{
+	.as_agence-input
+	{
+		font-size:1.5vw;
+	}
+}
+.as_agence-bouton
+{
+	border-bottom:1px solid #999999;
+	border-right:1px solid #999999;
+	
+	border-top:1px solid #efefef;
+	border-left:1px solid #efefef;
+	background: rgb(172,171,168);
+	background: linear-gradient(90deg, rgba(172,171,168,1) 0%, rgba(217,215,210,1) 50%, rgba(172,171,168,1) 100%);
+	color:#202020;
+	font-size:0.8vw;
+	cursor:pointer;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	padding:5px;
+	
+}
+.as_agence-bouton-action
+{
+	border-bottom:1px solid #999999;
+	border-right:1px solid #999999;
+	
+	border-top:1px solid #efefef;
+	border-left:1px solid #efefef;
+	background: rgb(172,171,168);
+	background: linear-gradient(90deg, rgba(172,171,168,1) 0%, rgba(217,215,210,1) 50%, rgba(172,171,168,1) 100%);
+	color:#202020;
+	font-size:0.8vw;
+	cursor:pointer;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	padding:2px;
+	width:100px;
+	max-width:100px;
+	text-align:center;
+}
+.as_agence-bouton-validation
+{
+	border-bottom:1px solid #999999;
+	border-right:1px solid #999999;
+	
+	border-top:1px solid #efefef;
+	border-left:1px solid #efefef;
+	background: rgb(172,171,168);
+	background: linear-gradient(90deg, rgba(172,171,168,1) 0%, rgba(217,215,210,1) 50%, rgba(172,171,168,1) 100%);
+	color:#202020;
+	font-size:0.8vw;
+	cursor:pointer;
+	-webkit-border-radius: 1px;
+	-moz-border-radius: 1px;
+	border-radius: 1px;
+	padding:5px;
+	width:100px;
+	max-width:100px;
+	text-align:center;
+}
+.as_agence-fond-vert 
+{
+	/* background: rgb(172,255,168); */
+	/* background: linear-gradient(90deg, rgba(172,255,168,1) 0%, rgba(217,255,210,1) 50%, rgba(172,255,168,1) 100%); */
+	
+}
+.as_agence-fond-rouge
+{
+	/* background: rgb(255,171,168); */
+	/* background: linear-gradient(90deg, rgba(255,171,168,1) 0%, rgba(255,215,210,1) 50%, rgba(255,171,168,1) 100%); */
+	
+}
+.as_agence-fond-bleu
+{
+	/* background: rgb(172,171,255); */
+	/* background: linear-gradient(9	0deg, rgba(172,171,255,1) 0%, rgba(217,215,255,1) 50%, rgba(172,171,255,1) 100%); */
+	
+}
+@media (max-width: 768px)
+{
+	.as_agence-bouton
+	{
+		font-size:2vw;
+	}
+	.as_agence-bouton-action
+	{
+		font-size:2vw;
+	}
+	.as_agence-bouton-validation
+	{
+		font-size:2vw;
+	}
+}
+.as_agence-ombre
+{
+	-webkit-box-shadow: 0px 10px 13px -7px #999999, 5px 5px 15px 5px rgba(99,99,99,0); 
+	box-shadow: 0px 10px 13px -7px #999999, 5px 5px 15px 5px rgba(99,99,99,0);
+	
+}
+/* AdobeStock_605318126_Preview.jpeg */
+.as_agence-image-accueil
+{
+	width:100%;
+	background-image:url("../images/AdobeStock_368867597_V2.jpg");
+	background-position:left top;
+	background-repeat: no-repeat;
+	background-size:cover;
+}
+.as_agence-box-select
+{
+	display:inline-block;
+	background-color:#efefef;
+	color:#409940;
+	border:0px solid #409940;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4x;
+	padding:6px;
+	padding-left:32px;
+	margin:4px;
+	
+	background-image:url("../images/green_select.png");
+	background-position:left center;
+	background-size:24px;
+	background-repeat:no-repeat;
+}
+.as_agence-box-unselect
+{
+	display:inline-block;
+	background-color:#efefef;
+	color:#202020;
+	border:0px solid #A80000;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4x;
+	padding:6px;
+	padding-left:32px;
+	margin:4px;
+	
+	background-image:url("../images/gris_unselect.png");
+	background-position:left center;
+	background-size:24px;
+	background-repeat:no-repeat;
+}
+.as_agence-box-datas
+{
+	display:inline-block;
+	background-color:#efefef;
+	color:#606060;
+	border:1px solid #fefefe;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4x;
+	padding:2px;
+	min-width:70%;
+	width:70%;
+	max-width:70%;
+}
+
+.as_agence-menu-container-left 
+{
+	vertical-align:top;
+	width:8%;
+	max-width:8%;
+	min-height:80%; 
+	/* max-height:70%; */
+	
+	display:inline-block;
+	padding:0.5%;
+	margin-top:1%;
+	left:0.1%;
+	border:1px solid #efefef;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4x;
+	overflow:auto;
+	background-color:#202020;
+	color:#ffffff;
+	
+}
+
+.as_agence-menu-container-right
+{
+	vertical-align:top;
+	min-height:80%;
+	/* max-height:70%; */
+	width:88%;
+	max-width:88%;
+	display:inline-block;
+	padding:0.5%;
+	margin-top:1%;
+	left:10%;
+	border:1px solid #efefef;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	/* overflow:auto; */
+}
+
+@media (max-width: 768px)
+{
+	.as_agence-menu-container-left
+	{
+		/* width:98%; */
+		/* max-width:98%; */
+		/* min-height:60%; */
+		display:block; 
+	} 
+	.as_agence-menu-container-right
+	{
+		/* width:98%; */
+		/* max-width:98%; */
+		/* min-height:30%;  */
+		display:block;
+	} 
+}
+/* ------------------------------------------------------------------------------------------------------------ */
+.as_agence-div-header-table-dashboard
+{
+	/* position:absolute; */
+	vertical-align:top;
+	/* min-height:8%; */
+	/* max-height:8%; */
+	/* width:100%; */
+	/* max-width:100%; */
+	/* display:table; */
+	/* height:fit-content;	 */
+	padding:0.5%;
+	/* border:1px solid #202020; */
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	overflow:auto;
+}	
+
+.as_agence-div-header-table
+{
+	/* position:absolute; */
+	vertical-align:top;
+	min-height:8%;
+	max-height:8%;
+	/* width:100%; */
+	/* max-width:100%; */
+	/* display:table; */
+	/* height:fit-content;	 */
+	padding:0.5%;
+	/* border:1px solid #202020; */
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	overflow:auto;
+}	
+
+.as_agence-div-content-table
+{
+	/* position:absolute; */
+	vertical-align:top;
+	/* min-height:56%; */
+	/* max-height:56%; */
+	/* width:100%; */
+	/* max-width:100%; */
+	/* display:table; */
+	/* height:fit-content;	 */
+	padding:0.5%;
+	border:1px solid #999999;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	overflow:auto;
+}
+/* ------------------------------------------------------------------------------------------------------------ */
+	
+.as_agence-icon-menu
+{
+		width:40%;
+		max-width:40%;
+		cursor:pointer;
+}
+.as_agence-icon-menu-mini
+{
+		width:10%;
+		max-width:10%;
+		cursor:pointer;
+}
+@media (max-width: 768px)
+{
+
+	.as_agence-icon-menu
+	{
+		width:40%;
+		max-width:40%;
+		cursor:pointer;
+	}
+	.as_agence-icon-menu-mini
+	{
+		width:10%;
+		max-width:10%;
+		cursor:pointer;
+	}
+}
+.as_agence-fa
+{
+	color:#aaaaaa;
+	font-size:1.5vw;
+}
+.as_agence-lib-menu 
+{
+	cursor:pointer;
+	color:#aaaaaa;
+}
+.as_agence-gris
+{
+	/* background: rgb(235,155,0); */
+	/* background: linear-gradient(90deg, rgba(235,155,0,1) 0%, rgba(244,204,95,1) 50%, rgba(235,155,0,1) 100%); */
+	background: rgb(255,255,255);
+	background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(236,234,231,1) 50%, rgba(249,248,245,1) 100%);
+
+}
+.as_agence-bat-image
+{
+	background-color:#ffffff;
+	color:#ffffff;
+	/* width:80%; */
+	max-width:80%;
+	/* aspect-ratio: 1 / 1; */
+	height:80%;
+	max-height:80%;
+	vertical-align:top;
+	position:relative;
+	display:inline-block;
+	padding:0.5%;
+	margin:1%;
+	/* margin-left:1%; */
+	cursor:pointer;
+}
+.as_agence-bat-link
+{
+	font-size:0.7vw;
+	color:#ffffff;
+	cursor:pointer;
+}
+.as_agence-box-bat-waiting 
+{
+	font-size:1vw;
+	background-color:#AAAAAA;
+	color:#ffffff;
+	width:20%;
+	max-width:20%;
+	/* aspect-ratio: 1 / 1; */
+	/* height:20%; */
+	/* max-height:20%; */
+	vertical-align:top;
+	position:relative;
+	display:inline-block;
+	padding:0.5%;
+	margin:1%;
+	/* margin-left:1%; */
+	/* border:1px solid #009900; */
+	/* background: rgb(255,255,255); */
+	/* background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(250,250,250,1) 50%, rgba(255,255,255,1) 100%); */
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	cursor:pointer;
+}
+.as_agence-box-bat 
+{
+	font-size:1vw;
+	background-color:#AAAAAA;
+	color:#ffffff;
+	width:20%;
+	max-width:20%;
+	/* aspect-ratio: 1 / 1; */
+	/* height:20%; */
+	/* max-height:20%; */
+	vertical-align:top;
+	position:relative;
+	display:inline-block;
+	padding:0.5%;
+	margin:1%;
+	/* margin-left:1%; */
+	/* border:1px solid #009900; */
+	/* background: rgb(255,255,255); */
+	/* background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(250,250,250,1) 50%, rgba(255,255,255,1) 100%); */
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	cursor:pointer;
+}
+.as_agence-waiting
+{
+	background-color:C0C0EE;
+}
+.as_agence-validate
+{
+	background-color:C0EEC0;
+}
+.as_agence-refused
+{
+	background-color:EEC0C0;
+}
+.as_agence-menu-box
+{
+	font-size:0.7vw;
+	background-color:#202020;
+	color:#ffffff;
+	/* width:20%; */
+	/* max-width:20%; */
+	/* aspect-ratio: 1 / 1; */
+	/* height:20%; */
+	/* max-height:20%; */
+	vertical-align:top;
+	position:relative;
+	display:block;
+	padding:0.5%;
+	margin:1%;
+	/* margin-left:1%; */
+	border-bottom:1px solid #606060;
+	/* background: rgb(255,255,255); */
+	/* background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(250,250,250,1) 50%, rgba(255,255,255,1) 100%); */
+	/* -webkit-border-radius: 2px; */
+	/* -moz-border-radius: 2px; */
+	/* border-radius: 2px; */
+	color:#aaaaaa;
+	width:100%;
+	cursor:pointer;
+}
+.as_agence-menu-box-gris
+{
+	font-size:1vw;
+	width:20%;
+	max-width:20%;
+	aspect-ratio: 1 / 1;
+	/* height:20%; */
+	/* max-height:20%; */
+	vertical-align:middle;
+	/*margin:auto;*/
+	position:relative;
+	/* top:1%; */
+	/* left:1%; */
+	display:inline-block;
+	padding:0.5%;
+	margin-top:1%;
+	margin-left:1%;
+	border:1px solid #efefef;
+	background: rgb(255,255,255);
+	background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(236,234,231,1) 50%, rgba(249,248,245,1) 100%);
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	color:#bbbbbb;
+	background-image:url("../images/top_box_menu_sepia.jpg");
+	background-position:left top;
+	background-repeat: no-repeat;
+	
+}
+.as_agence-disabled
+{
+	opacity: 0.33;
+}
+@media (max-width: 768px)
+{
+	.as_agence-menu-box
+	{
+		width:20%;
+		max-width:20%;
+		aspect-ratio: 1 / 1;
+		
+		font-size:2.5vw;
+		
+	}
+}
+.as_agence-main
+{
+	width:100%;
+	max-width:100%;
+	/*margin:auto;*/
+	background-color:#ffffff;
+	position:relative;
+	top:0px;
+	left:0px;
+	padding:0px;
+}
+.as_agence-logo-ee
+{
+	display:inline-block;
+	width:100%;
+	height:110px;
+	vertical-align:top;
+	/* position:relative; */
+	
+}
+.as_agence-logo-clt
+{
+	display:inline-block;
+	width:49%;
+	height:110px;
+	vertical-align:top;
+	/* position:relative; */
+}
+.as_agence-dimension-logo
+{
+	height:40px;
+}
+@media (max-width: 768px)
+{
+	.as_agence-logo-ee
+	{
+		display:inline-block;
+		width:100%;
+		height:80px;
+		vertical-align:top;
+		/* position:relative; */
+		
+	}
+	.as_agence-logo-clt
+	{
+		display:inline-block;
+		width:48%;
+		height:80px;
+		vertical-align:menu-box;
+		/* position:relative; */
+	}
+	.as_agence-dimension-logo
+	{
+		width:100px;
+	}
+}
+.as_agence-item-menu
+{
+	display:inline-block;
+	width:120px;
+	/* height:110px; */
+	top:0px;
+	font-size:1vw;
+	/* line-height:110px; */
+	/* vertical-align:middle; */
+	/* position:relative; */
+	
+}
+.as_agence-header-box
+{
+	display:inline-block;
+	width:100%;
+	height:40px;
+	top:0px;
+	left:0px;
+	position:relative;
+	background-color:#404040;
+	vertical-align:middle;
+}
+.as_agence-header-box-menu
+{
+	display:inline-block;
+	width:48%;
+	height:2%;
+	left:50%;
+	top:80px;
+	padding:5px;
+	position:absolute;
+	background-color:#fefefe;
+	vertical-align:top;
+	text-align:left;
+	color:#202020;
+	border:1px solid #202020;
+}
+.as_agence-header-box-logo
+{
+	display:inline-block;
+	width:100%;
+	height:60px;
+	top:0px;
+	left:0px;
+	position:relative;
+	background-color:#fefefe;
+	vertical-align:middle;
+}
+@media (max-width: 768px)
+{
+	.as_agence-header-box-logo
+	{
+		height:60px;
+	}
+}
+
+.as_agence-spacer
+{
+	height:2px;
+	min-height:2px;
+	width:100%;
+}
+.as_agence-spacer-middle
+{
+	height:16px;
+	min-height:16px;
+	width:100%;
+}
+/* -----------------------------------------------------------------*/
+.as_agence-pointer
+{
+	cursor:pointer;
+}
+.as_agence-box
+{
+	width:45%; 
+	max-width:45%; 
+	background-color:transparent;
+	vertical-align:top;
+	padding:1%;
+	margin:0.5%;
+	display:inline-block;
+}
+/* ----------------------------------------------------------------- */
+.as_agence-hr
+{
+	border:1px dashed #dce3e8;
+}
+/* ----------------------------------------------------------------- */
+.as_agence-gras
+{
+	font-weight:700;
+}
+.as_agence-couleur-titre
+{
+	color:#ffffff;
+}
+/* ----------------------------------------------------------------- */
+.as_agence-left
+{
+	text-align:left;
+}
+.as_agence-center
+{
+	text-align:center;
+}
+.as_agence-right
+{
+	text-align:right;
+} 
+/* -------------------------------------------------------------------*/
+.footer
+{
+	/* position:absolute; */
+	/* bottom:0px; */
+	position:relative;
+	width:100%;
+	text-align:center
+}
+@media (max-width: 768px)
+{
+.footer
+{
+	position:relative;
+	width:100%;
+	
+}
+
+

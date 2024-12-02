@@ -1,0 +1,517 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: auto;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    width: calc(100% - 40px);
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo .logo-img {
+    width: 100%; 
+    height: auto; 
+    margin-right: 10px; 
+}
+
+header .logo {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+header .demo-btn  {
+    background-color: #FFA500;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+	font-weight: bold; 
+}
+
+
+main {
+    text-align: center;
+    border-radius: 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 70px auto;
+}
+
+.content{
+display: block;
+    /* flex-direction: row; */
+    width: 800px;
+    margin: auto;
+    padding: 10px 20px;
+}
+h1 {
+
+    margin-bottom: 20px;
+}
+.center{
+text-align: center;
+}
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+width: 700px;
+}
+
+.input-group,
+.checkbox-group {
+    margin-bottom: 28px;
+}
+
+.input-group {
+	margin-bottom: 15px;
+display: block;
+}
+
+.password-group {
+    position: relative;
+    margin-bottom: 0;
+}
+
+.input-group label {
+    text-align: left;
+    display: block;
+}
+
+.input-group input {
+    padding: 17px;
+    border: 1.5px solid #ccc;
+    border-radius: 10px;
+    width: 100%;
+    margin: 0 auto;
+	color : #666969;
+}
+
+
+.password-group .error {
+    position: relative;
+    right: -325px;
+    top: -37px;
+    transform: translateY(-50%);
+    color: red;
+    cursor: pointer;
+	font-size: 21px;
+}
+
+.checkbox-group {
+    position: relative;
+    color: #2D2E2E;
+  
+}
+.checkbox-group label {
+    font-size: 1px; 
+}
+
+.checkbox-group input[type="checkbox"] {
+    transform: scale(0.9);
+    margin-right: 5px;
+}
+
+.checkbox-group label {
+    font-size: 12px;
+    vertical-align: middle;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: -20px;
+}
+
+.forgot-password {
+    color: #2D2E2E;
+    text-decoration: none;
+	 font-size: 12px; 
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.login-btn {
+    background-color: #FFA500;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 13px;
+    cursor: pointer;
+    width: 75%;
+    margin: 0 auto;
+	 font-size: 18px; 
+	 font-weight: bold; 
+	 text-decoration: none;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Ajuster l'espace entre les liens */
+    font-size: 13px;
+}
+
+footer a {
+    color: #5F6568;
+    text-decoration: none;
+    margin: 5px; /* Ajustez l'espace horizontal entre les liens */	
+	position: relative;
+   
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.language-switch {
+    display: flex;
+    gap: 10px;
+}
+
+.lang-btn {
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 4px 8px;
+    cursor: pointer;
+	
+	position: relative;
+}
+.error-group{
+    color: red;
+margin-bottom: 20px;
+}
+.lang-btn:hover {
+    background-color: #e0e0e0;
+}
+/* Pour la page ForgetPassword.php  */
+main2 {
+    text-align: center;
+    background-color: white;
+    padding: 230px;  
+    border-radius: 0px;
+    width: 1532px;
+}
+
+.input-group2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+	 margin-bottom: 25px;
+}
+.input-group2 label {
+    margin-bottom: 4px;
+    width: 46%;
+}
+.input-group2 input {
+    padding: 17px;
+    border: 1.5px solid #ccc;
+    border-radius: 10px;
+    width: 58%;
+    margin: 0 auto;
+	color : #666969;
+}
+
+.buttons-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.back-btn,
+.continue-btn {
+    background-color: #FFA500;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 13px;
+    cursor: pointer;
+    
+    margin: 0 auto;
+    font-size: 18px;
+		
+		
+	font-weight: bold; 	 
+    position: relative;
+
+}
+
+.back-btn {
+    background-color: #fff;
+    color: #1D2020;
+    border: 2px solid #1D2020;
+	width: 18%;
+    top: -5px; 
+    left: 109px; 
+	
+
+}
+.continue-btn {
+	width: 37%;
+     top: -5px; 
+    left: -105px;
+}
+.back-btn:hover,
+.continue-btn:hover, 
+.demo-btn:hover,
+.login-btn:hover,
+.Conex-btn:hover {
+    background-color: #e0e0e0;
+}
+/* Pour la page ResetPassword.php  */
+
+main3 {
+    text-align: center;
+    background-color: white;
+    padding: 243px;
+    border-radius: 0px;
+    width: 1532px;
+}
+
+
+
+p {
+    margin-bottom: 40px;
+    color: #1D2020;
+}
+
+.Conex-btn {
+    background-color: #FFA500;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 13px;
+    cursor: pointer;
+    width: 36%;
+    margin: 0 auto;
+    font-size: 18px;
+	font-weight: bold; 
+}
+/* Pour la page Demo.php  */
+main4 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: white;
+    padding: 110px;
+    border-radius: 0px;
+    width: 1529px;
+    margin: 0 auto;
+    margin-top: 0px;
+}
+
+
+.demo-left {
+    width: 60%;
+}
+
+.demo-right {
+    width: 60%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 8px;
+    margin-bottom: 5px;
+     /* font-weight: bold;  */
+	 font-size: 13px;
+}
+
+input, textarea, select {
+    padding: 10px;
+    border: 1.4px solid #1D2020;
+    border-radius: 7px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.phone-container {
+    display: flex;
+    align-items: center;
+}
+
+.phone-container select {
+    margin-right: 10px;
+}
+
+.terms input[type="checkbox"] {
+       transform: scale(0.9);
+        margin-right: 3px;
+    }
+.terms label {
+        font-size: 12px;
+    vertical-align: middle;
+    }
+.send-btn {
+    background-color: #FFA500;
+    color: white;
+    border: none;
+    border-radius: 13px;
+    padding: 12px;
+    cursor: pointer;
+    width: 670px;
+    margin-top: 10px;
+	font-weight: bold; 
+	font-size: 14px;
+}
+
+h1 {
+    margin-bottom: 20px;
+	position: relative;
+	
+}
+
+p1 {
+    margin-bottom: 20px;
+    color: #000000;
+	
+	
+}
+
+/* Pour la page FQA.php  */
+
+main5 {
+    text-align: center;
+    background-color: white;
+    padding: 201px;
+    border-radius: 0px;
+    width: 1529px;
+}
+
+
+.faq {
+	        
+            width: 70%;
+            max-width: 700px;
+			position: relative;
+          
+          left: 210px;
+        }
+
+        .faq-item {
+            margin-bottom: 10px;
+            background-color: white;
+        }
+.faq-item:not(:last-child) {
+    border-bottom: 1px solid #ccc;
+}
+        .faq-question {
+            padding: 15px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+			
+        }
+
+        .faq-answer {
+            padding: 15px;
+            display: none;
+			color : #494D4D;
+			text-align: left;
+        }
+
+        .faq-question.open + .faq-answer {
+            display: block;
+        }
+
+        .faq-question::after {
+            content: '\25BC';
+            font-size: 16px;
+        }
+
+        .faq-question.open::after {
+            content: '\25B2';
+        }
+		
+		
+		
+	.loading-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #ffffff;
+    position: fixed;
+    top: -45px;
+    left: 0;
+    z-index: 1000;
+}
+
+.loading-content {
+    text-align: center;
+	font-size: 26px;
+display: block;
+
+}
+
+.logoLoad-img {
+    width: 100%;
+    height: auto;
+    margin: 25px auto;
+	position: relative;
+    text-align: center;
+display: block;
+}
+
+.spinner {
+    width: 59px;
+    height: 59px;
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-top-color: #FFA500;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 10px auto;
+	
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+p {
+    color: #666;
+    font-size: 16px;
+    margin-top: 10px;
+}	
